@@ -1,0 +1,622 @@
+/* ═══════════════════════════════════════════════════════════════
+   Premium Mobile Experience — Phone-first enhancements
+   Touch targets, safe areas, typography, spacing
+   ═══════════════════════════════════════════════════════════════ */
+
+/* ─── MOBILE BASE (< 768px) ─── */
+@media (max-width: 768px) {
+  :root {
+    --section-padding: 60px;
+    --container-padding: 20px;
+  }
+
+  .container {
+    padding-left: max(var(--container-padding), env(safe-area-inset-left));
+    padding-right: max(var(--container-padding), env(safe-area-inset-right));
+  }
+
+  .section {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+}
+
+/* ─── SMALL PHONE (< 480px) ─── */
+@media (max-width: 480px) {
+  :root {
+    --section-padding: 48px;
+    --container-padding: 18px;
+  }
+
+  .section {
+    padding-top: 48px;
+    padding-bottom: 48px;
+  }
+}
+
+/* ─── NAVIGATION — Mobile ─── */
+@media (max-width: 900px) {
+  .nav {
+    padding-top: max(14px, env(safe-area-inset-top));
+    padding-left: env(safe-area-inset-left);
+    padding-right: env(safe-area-inset-right);
+  }
+
+  .nav-inner {
+    padding-left: max(20px, env(safe-area-inset-left));
+    padding-right: max(20px, env(safe-area-inset-right));
+  }
+
+  .nav-logo {
+    min-height: 44px;
+    min-width: 44px;
+    padding: 4px 0;
+  }
+
+  .nav-logo svg {
+    width: 36px;
+    height: 36px;
+  }
+
+  .nav-logo-text {
+    font-size: 1.15rem;
+  }
+
+  .hamburger {
+    min-width: 48px;
+    min-height: 48px;
+    padding: 12px;
+    margin: -8px -8px -8px 0;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  .nav-links {
+    padding: max(24px, env(safe-area-inset-top)) 24px max(32px, env(safe-area-inset-bottom));
+    min-height: calc(100vh - 60px);
+    justify-content: flex-start;
+    gap: 0;
+  }
+
+  .nav-links li {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+  }
+
+  .nav-links a {
+    display: block;
+    padding: 18px 0;
+    font-size: 0.9rem;
+    letter-spacing: 0.12em;
+    min-height: 56px;
+    display: flex;
+    align-items: center;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  .nav-links .nav-cta {
+    margin-top: 16px;
+    padding: 16px 24px !important;
+    justify-content: center;
+    min-height: 52px;
+    border-radius: var(--radius-sm);
+  }
+}
+
+/* ─── HERO — Mobile ─── */
+@media (max-width: 900px) {
+  .hero {
+    min-height: 100vh;
+    min-height: 100dvh;
+    padding-top: env(safe-area-inset-top);
+    padding-bottom: env(safe-area-inset-bottom);
+  }
+
+  .hero-content {
+    gap: 40px;
+    padding-top: 24px;
+    padding-bottom: max(24px, env(safe-area-inset-bottom));
+    grid-template-rows: auto auto;
+  }
+
+  /* Text first, logo second on mobile */
+  .hero-text {
+    order: 1;
+  }
+
+  .hero-visual {
+    order: 2;
+  }
+
+  .hero-badge {
+    font-size: 0.6rem;
+    letter-spacing: 0.25em;
+    padding: 6px 14px;
+  }
+
+  .hero h1 {
+    font-size: clamp(2rem, 8vw, 2.8rem);
+    margin-bottom: 20px;
+    line-height: 1.2;
+  }
+
+  .hero-desc {
+    font-size: 1rem;
+    margin-bottom: 32px;
+    padding: 0 8px;
+  }
+
+  .hero-btns {
+    flex-direction: column;
+    gap: 12px;
+    width: 100%;
+    max-width: 320px;
+    margin: 0 auto;
+  }
+
+  .hero-btns .btn-primary,
+  .hero-btns .btn-outline {
+    width: 100%;
+    min-height: 52px;
+    padding: 18px 28px;
+    font-size: 0.8rem;
+    justify-content: center;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  .hero-logo-wrapper {
+    width: 220px;
+    height: 220px;
+    margin: 0 auto;
+  }
+
+  /* Reduce breathing orb intensity on mobile for performance */
+  .hero::before {
+    width: 400px;
+    height: 400px;
+    animation-duration: 8s;
+  }
+
+  /* Lighter particles on mobile for performance */
+  .hero-particles {
+    opacity: 0.7;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero h1 {
+    font-size: 1.85rem;
+  }
+
+  .hero-logo-wrapper {
+    width: 200px;
+    height: 200px;
+  }
+
+  .hero-btns {
+    max-width: 100%;
+  }
+}
+
+/* ─── VALUES BAR — Mobile ─── */
+@media (max-width: 768px) {
+  .values-bar {
+    padding: 40px 0;
+  }
+
+  .values-grid {
+    gap: 24px;
+    padding: 0 8px;
+  }
+
+  .value-item {
+    padding: 8px 0;
+  }
+
+  .value-item .value-icon {
+    width: 44px;
+    height: 44px;
+  }
+
+  .value-item h4 {
+    font-size: 0.68rem;
+  }
+
+  .value-item p {
+    font-size: 0.78rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .values-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+}
+
+/* ─── ABOUT — Mobile ─── */
+@media (max-width: 900px) {
+  .about-grid {
+    gap: 32px;
+  }
+
+  .about-image {
+    min-height: 220px;
+  }
+
+  .about-text .mission-quote {
+    font-size: 1.1rem;
+    padding-left: 20px;
+    margin-top: 24px;
+  }
+
+  .section-subtitle {
+    font-size: 0.98rem;
+  }
+}
+
+/* ─── SERVICES — Mobile ─── */
+@media (max-width: 900px) {
+  .services-grid {
+    gap: 20px;
+    margin-top: 36px;
+  }
+
+  .service-card {
+    padding: 28px 24px;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  .service-card:active {
+    transform: scale(0.99);
+  }
+
+  .service-icon {
+    width: 48px;
+    height: 48px;
+    margin-bottom: 16px;
+  }
+
+  .service-card h3 {
+    font-size: 1.25rem;
+  }
+
+  .service-card p,
+  .service-card ul li {
+    font-size: 0.9rem;
+  }
+}
+
+/* ─── WHY US — Mobile ─── */
+@media (max-width: 900px) {
+  .why-grid {
+    gap: 20px;
+    margin-top: 36px;
+  }
+
+  .why-card {
+    padding: 28px 24px;
+  }
+
+  .why-card h3 {
+    font-size: 1.2rem;
+  }
+
+  .why-card p {
+    font-size: 0.9rem;
+  }
+}
+
+/* ─── TESTIMONIALS — Mobile ─── */
+@media (max-width: 900px) {
+  .testimonials-grid {
+    gap: 24px;
+    margin-top: 36px;
+  }
+
+  .testimonial-card {
+    padding: 28px 24px;
+  }
+
+  .testimonial-quote {
+    font-size: 1.05rem;
+  }
+}
+
+/* ─── CORE VALUES — Mobile ─── */
+@media (max-width: 768px) {
+  .values-flex {
+    grid-template-columns: 1fr;
+    gap: 16px;
+    margin-top: 36px;
+  }
+
+  .cv-card {
+    padding: 24px 20px;
+  }
+}
+
+/* ─── FAQ — Mobile ─── */
+@media (max-width: 768px) {
+  .faq-list {
+    margin-top: 36px;
+  }
+
+  .faq-question {
+    padding: 20px 0;
+    font-size: 1.05rem;
+    min-height: 56px;
+    align-items: center;
+    -webkit-tap-highlight-color: transparent;
+    text-align: left;
+  }
+
+  .faq-question::after {
+    margin-left: 12px;
+    flex-shrink: 0;
+  }
+
+  .faq-answer-inner {
+    padding-bottom: 20px;
+    font-size: 0.95rem;
+  }
+}
+
+/* ─── CTA SECTION — Mobile ─── */
+@media (max-width: 768px) {
+  .cta-section {
+    padding: 56px 24px;
+  }
+
+  .cta-section h2 {
+    font-size: 1.75rem;
+    margin-bottom: 12px;
+  }
+
+  .cta-section p {
+    font-size: 0.95rem;
+    margin-bottom: 28px;
+  }
+
+  .cta-section .btn-dark {
+    min-height: 56px;
+    padding: 18px 36px;
+    font-size: 0.85rem;
+    width: 100%;
+    max-width: 320px;
+    -webkit-tap-highlight-color: transparent;
+  }
+}
+
+/* ─── CONTACT — Mobile ─── */
+@media (max-width: 900px) {
+  .contact-grid {
+    gap: 36px;
+    margin-top: 36px;
+  }
+
+  .contact-info-card {
+    padding: 32px 28px;
+  }
+
+  .contact-info-card h3 {
+    font-size: 1.4rem;
+    margin-bottom: 20px;
+  }
+
+  .contact-item {
+    margin-bottom: 20px;
+  }
+
+  .contact-item-text a[href^="tel:"] {
+    font-size: 1.1rem;
+    font-weight: 500;
+    padding: 8px 0;
+    display: inline-block;
+    min-height: 44px;
+    line-height: 1.4;
+    -webkit-tap-highlight-color: transparent;
+  }
+}
+
+@media (max-width: 768px) {
+  .form-group input,
+  .form-group textarea,
+  .form-group select {
+    font-size: 16px; /* Prevents iOS zoom on focus */
+    padding: 16px 18px;
+    min-height: 52px;
+  }
+
+  .form-group textarea {
+    min-height: 140px;
+  }
+
+  .form-group label {
+    margin-bottom: 6px;
+  }
+
+  .contact-form-wrapper .btn-primary {
+    min-height: 56px;
+    padding: 18px;
+    font-size: 0.85rem;
+    -webkit-tap-highlight-color: transparent;
+  }
+}
+
+/* ─── FOOTER — Mobile ─── */
+@media (max-width: 900px) {
+  .footer {
+    padding: 48px 0 24px;
+    padding-bottom: max(24px, env(safe-area-inset-bottom));
+  }
+
+  .footer-grid {
+    gap: 32px;
+    margin-bottom: 36px;
+  }
+
+  .footer-brand p {
+    font-size: 0.88rem;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    text-align: center;
+    padding-top: 20px;
+  }
+}
+
+@media (max-width: 600px) {
+  .footer-grid {
+    grid-template-columns: 1fr;
+    gap: 28px;
+    text-align: center;
+  }
+
+  .footer-brand {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer-brand p {
+    text-align: center;
+  }
+
+  .footer-col h4 {
+    margin-bottom: 14px;
+  }
+
+  .footer-col a {
+    padding: 6px 0;
+    min-height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+/* ─── TYPOGRAPHY — Mobile ─── */
+@media (max-width: 768px) {
+  .section-title {
+    font-size: clamp(1.75rem, 5vw, 2.25rem);
+    margin-bottom: 16px;
+  }
+
+  .eyebrow {
+    font-size: 0.65rem;
+    letter-spacing: 0.35em;
+    margin-bottom: 12px;
+  }
+
+  .gold-line {
+    margin: 16px 0 24px;
+  }
+}
+
+/* ─── REDUCE MOTION ─── */
+@media (prefers-reduced-motion: reduce) {
+  .hero-particle,
+  .orbit-ring,
+  .orbit-ring-2,
+  .ray-animated,
+  .sun-glow-animated,
+  .smoke-wisp,
+  .hero::before {
+    animation: none !important;
+  }
+
+  .hero::before {
+    opacity: 0.9;
+  }
+
+  .fade-in {
+    opacity: 1;
+    transform: none;
+  }
+
+  .fade-in.visible {
+    opacity: 1;
+  }
+}
+
+/* ─── STICKY MOBILE CTA ─── */
+.mobile-cta-bar {
+  display: none;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 999;
+  background: linear-gradient(135deg, var(--gold), var(--gold-deep));
+  color: var(--navy);
+  padding: 16px 24px;
+  padding-bottom: max(16px, env(safe-area-inset-bottom));
+  font-family: var(--font-heading);
+  font-size: 0.9rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  text-decoration: none;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  box-shadow: 0 -4px 24px rgba(0, 0, 0, 0.15);
+  -webkit-tap-highlight-color: transparent;
+  transition: transform 0.2s ease;
+}
+
+.mobile-cta-bar:active {
+  transform: scale(0.98);
+}
+
+@media (max-width: 900px) {
+  .mobile-cta-bar {
+    display: flex;
+  }
+
+  /* Add padding to main so content isn't hidden behind sticky CTA */
+  main {
+    padding-bottom: 72px;
+  }
+}
+
+@media (min-width: 901px) {
+  .mobile-cta-bar {
+    display: none !important;
+  }
+
+  main {
+    padding-bottom: 0;
+  }
+}
+
+/* ─── TOUCH OPTIMIZATIONS ─── */
+@media (hover: none) and (pointer: coarse) {
+  .btn-primary:hover,
+  .btn-outline:hover,
+  .btn-dark:hover {
+    transform: none;
+  }
+
+  .btn-primary:active,
+  .btn-outline:active,
+  .btn-dark:active {
+    transform: scale(0.98);
+  }
+
+  .service-card:hover {
+    transform: none;
+  }
+
+  .service-card:active {
+    transform: scale(0.99);
+  }
+
+  .why-card:hover {
+    transform: none;
+  }
+
+  .cv-card:hover {
+    transform: none;
+  }
+}
