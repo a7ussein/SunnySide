@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1080" height="1080" viewBox="0 0 1080 1080" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="sunGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#FFD166"/>
+      <stop offset="50%" style="stop-color:#F2A900"/>
+      <stop offset="100%" style="stop-color:#E07B00"/>
+    </linearGradient>
+    <radialGradient id="bgGrad" cx="50%" cy="45%">
+      <stop offset="0%" style="stop-color:#1A2E50"/>
+      <stop offset="100%" style="stop-color:#0F1B33"/>
+    </radialGradient>
+    <radialGradient id="glow" cx="50%" cy="40%">
+      <stop offset="0%" style="stop-color:#F2A900;stop-opacity:0.12"/>
+      <stop offset="100%" style="stop-color:#F2A900;stop-opacity:0"/>
+    </radialGradient>
+  </defs>
+  <rect width="1080" height="1080" fill="url(#bgGrad)"/>
+  <circle cx="540" cy="440" r="340" fill="url(#glow)"/>
+  <!-- Sun rays - larger for icon -->
+  <g transform="translate(540, 390)">
+    <polygon points="-9,-105 0,-175 9,-105" fill="#F2A900" opacity="0.7"/>
+    <polygon points="-8,-105 0,-158 8,-105" fill="#F2A900" opacity="0.55" transform="rotate(40)"/>
+    <polygon points="-9,-105 0,-175 9,-105" fill="#F2A900" opacity="0.7" transform="rotate(80)"/>
+    <polygon points="-8,-105 0,-158 8,-105" fill="#F2A900" opacity="0.55" transform="rotate(-40)"/>
+    <polygon points="-9,-105 0,-175 9,-105" fill="#F2A900" opacity="0.7" transform="rotate(-80)"/>
+    <polygon points="-6,-105 0,-142 6,-105" fill="#FFD166" opacity="0.3" transform="rotate(20)"/>
+    <polygon points="-6,-105 0,-142 6,-105" fill="#FFD166" opacity="0.3" transform="rotate(60)"/>
+    <polygon points="-6,-105 0,-142 6,-105" fill="#FFD166" opacity="0.3" transform="rotate(-20)"/>
+    <polygon points="-6,-105 0,-142 6,-105" fill="#FFD166" opacity="0.3" transform="rotate(-60)"/>
+  </g>
+  <!-- Sun -->
+  <circle cx="540" cy="390" r="95" fill="url(#sunGrad)"/>
+  <circle cx="525" cy="372" r="42" fill="white" opacity="0.06"/>
+  <!-- House -->
+  <g transform="translate(540, 520)">
+    <path d="M-85 0 L0 -70 L85 0" fill="none" stroke="white" stroke-width="8.5" stroke-linejoin="round" stroke-linecap="round" opacity="0.9"/>
+    <rect x="-70" y="0" width="140" height="88" fill="none" stroke="white" stroke-width="6.5" rx="4" opacity="0.8"/>
+    <path d="M-17 88 L-17 42 Q-17 26, 0 26 Q17 26, 17 42 L17 88" fill="rgba(242,169,0,0.3)" stroke="white" stroke-width="5" opacity="0.85"/>
+    <circle cx="10" cy="64" r="3.5" fill="white" opacity="0.55"/>
+    <rect x="-58" y="15" width="30" height="28" fill="rgba(242,169,0,0.15)" stroke="white" stroke-width="4" rx="2.5" opacity="0.7"/>
+    <line x1="-43" y1="15" x2="-43" y2="43" stroke="white" stroke-width="1.8" opacity="0.35"/>
+    <line x1="-58" y1="29" x2="-28" y2="29" stroke="white" stroke-width="1.8" opacity="0.35"/>
+    <rect x="28" y="15" width="30" height="28" fill="rgba(242,169,0,0.15)" stroke="white" stroke-width="4" rx="2.5" opacity="0.7"/>
+    <line x1="43" y1="15" x2="43" y2="43" stroke="white" stroke-width="1.8" opacity="0.35"/>
+    <line x1="28" y1="29" x2="58" y2="29" stroke="white" stroke-width="1.8" opacity="0.35"/>
+    <rect x="48" y="-58" width="22" height="46" fill="none" stroke="white" stroke-width="5" rx="2.5" opacity="0.6"/>
+  </g>
+  <!-- Caring arc -->
+  <path d="M340 645 Q440 672, 540 668 Q640 664, 740 645" stroke="#F2A900" stroke-width="5" fill="none" stroke-linecap="round" opacity="0.3"/>
+  <!-- Compact text -->
+  <text x="540" y="780" text-anchor="middle" font-family="'Cormorant Garamond', Georgia, 'Times New Roman', serif" font-size="72" fill="white" font-weight="300" letter-spacing="6">
+    <tspan fill="#F2A900" font-style="italic" font-weight="500">S</tspan>
+  </text>
+  <text x="540" y="830" text-anchor="middle" font-family="'Josefin Sans', 'Trebuchet MS', Verdana, sans-serif" font-size="28" fill="rgba(255,255,255,0.35)" letter-spacing="8" font-weight="300">SUNNYSIDE</text>
+</svg>

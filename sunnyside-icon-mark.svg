@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="512" height="512" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="sunGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#FFD166"/>
+      <stop offset="50%" style="stop-color:#F2A900"/>
+      <stop offset="100%" style="stop-color:#E07B00"/>
+    </linearGradient>
+  </defs>
+  <!-- Sun rays -->
+  <g transform="translate(256, 185)">
+    <polygon points="-6,-72 0,-118 6,-72" fill="#F2A900" opacity="0.75"/>
+    <polygon points="-5,-72 0,-108 5,-72" fill="#F2A900" opacity="0.6" transform="rotate(40)"/>
+    <polygon points="-6,-72 0,-118 6,-72" fill="#F2A900" opacity="0.75" transform="rotate(80)"/>
+    <polygon points="-5,-72 0,-108 5,-72" fill="#F2A900" opacity="0.6" transform="rotate(-40)"/>
+    <polygon points="-6,-72 0,-118 6,-72" fill="#F2A900" opacity="0.75" transform="rotate(-80)"/>
+    <polygon points="-4,-72 0,-95 4,-72" fill="#FFD166" opacity="0.35" transform="rotate(20)"/>
+    <polygon points="-4,-72 0,-95 4,-72" fill="#FFD166" opacity="0.35" transform="rotate(60)"/>
+    <polygon points="-4,-72 0,-95 4,-72" fill="#FFD166" opacity="0.35" transform="rotate(-20)"/>
+    <polygon points="-4,-72 0,-95 4,-72" fill="#FFD166" opacity="0.35" transform="rotate(-60)"/>
+  </g>
+  <!-- Sun -->
+  <circle cx="256" cy="185" r="62" fill="url(#sunGrad)"/>
+  <circle cx="246" cy="173" r="28" fill="white" opacity="0.07"/>
+  <!-- House -->
+  <g transform="translate(256, 270)">
+    <path d="M-56 0 L0 -46 L56 0" fill="none" stroke="#0F1B33" stroke-width="6" stroke-linejoin="round" stroke-linecap="round" opacity="0.9"/>
+    <rect x="-46" y="0" width="92" height="58" fill="none" stroke="#0F1B33" stroke-width="5" rx="3" opacity="0.8"/>
+    <path d="M-12 58 L-12 28 Q-12 16, 0 16 Q12 16, 12 28 L12 58" fill="rgba(242,169,0,0.25)" stroke="#0F1B33" stroke-width="3.5" opacity="0.7"/>
+    <circle cx="7" cy="42" r="2.5" fill="#0F1B33" opacity="0.4"/>
+    <rect x="-38" y="10" width="20" height="18" fill="rgba(242,169,0,0.1)" stroke="#0F1B33" stroke-width="3" rx="2" opacity="0.7"/>
+    <line x1="-28" y1="10" x2="-28" y2="28" stroke="#0F1B33" stroke-width="1.2" opacity="0.3"/>
+    <line x1="-38" y1="19" x2="-18" y2="19" stroke="#0F1B33" stroke-width="1.2" opacity="0.3"/>
+    <rect x="18" y="10" width="20" height="18" fill="rgba(242,169,0,0.1)" stroke="#0F1B33" stroke-width="3" rx="2" opacity="0.7"/>
+    <line x1="28" y1="10" x2="28" y2="28" stroke="#0F1B33" stroke-width="1.2" opacity="0.3"/>
+    <line x1="18" y1="19" x2="38" y2="19" stroke="#0F1B33" stroke-width="1.2" opacity="0.3"/>
+    <rect x="32" y="-38" width="14" height="30" fill="none" stroke="#0F1B33" stroke-width="3.5" rx="2" opacity="0.6"/>
+  </g>
+  <!-- Caring arc -->
+  <path d="M145 360 Q200 378, 256 375 Q312 372, 367 360" stroke="#1D7A7A" stroke-width="3.5" fill="none" stroke-linecap="round" opacity="0.3"/>
+</svg>
