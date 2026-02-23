@@ -175,6 +175,26 @@
   background: radial-gradient(ellipse at 50% 80%, var(--navy-mid) 0%, var(--navy) 60%, #080E1A 100%);
 }
 
+/* Breathing gradient orb behind logo (matches premium) */
+.hero::before {
+  content: '';
+  position: absolute;
+  width: 600px;
+  height: 600px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(242, 169, 0, 0.12) 0%, rgba(242, 169, 0, 0.03) 40%, transparent 70%);
+  animation: breathe 6s ease-in-out infinite;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -55%);
+  pointer-events: none;
+}
+
+@keyframes breathe {
+  0%, 100% { transform: translate(-50%, -55%) scale(1); opacity: 0.8; }
+  50% { transform: translate(-50%, -55%) scale(1.15); opacity: 1; }
+}
+
 .hero-particles {
   position: absolute;
   inset: 0;
@@ -312,24 +332,37 @@
 
 .hero-logo-wrapper {
   position: relative;
-  width: 340px;
-  height: 340px;
+  width: 280px;
+  height: 280px;
 }
 
 .orbit-ring {
   position: absolute;
-  inset: -10px;
-  border: 1px solid rgba(242, 169, 0, 0.08);
+  inset: -15px;
+  border: 1px solid rgba(242, 169, 0, 0.15);
   border-radius: 50%;
-  animation: spin 45s linear infinite;
+  animation: spin 30s linear infinite;
+}
+
+.orbit-ring::after {
+  content: '';
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  background: var(--gold);
+  border-radius: 50%;
+  top: -4px;
+  left: 50%;
+  transform: translateX(-50%);
+  box-shadow: 0 0 12px var(--gold);
 }
 
 .orbit-ring-2 {
   position: absolute;
-  inset: -30px;
-  border: 1px dashed rgba(255, 209, 102, 0.04);
+  inset: -35px;
+  border: 1px dashed rgba(255, 209, 102, 0.08);
   border-radius: 50%;
-  animation: spin 60s linear infinite reverse;
+  animation: spin 50s linear infinite reverse;
 }
 
 @keyframes spin {
@@ -341,25 +374,28 @@
   }
 }
 
-.ray {
-  animation: ray-pulse 4s ease-in-out infinite;
-  transform-origin: 50% 100%;
+.ray-animated {
+  animation: ray-pulse 3s ease-in-out infinite;
+  transform-origin: center bottom;
 }
 
 @keyframes ray-pulse {
-  0%,
-  100% {
-    opacity: 0.75;
-    transform: scale(1);
-  }
-  50% {
-    opacity: 1;
-    transform: scale(1.05);
-  }
+  0%, 100% { opacity: 0.7; transform: scaleY(1); }
+  50% { opacity: 1; transform: scaleY(1.15); }
 }
 
-.sun-glow {
+.sun-glow-animated {
   animation: sun-glow 4s ease-in-out infinite;
+}
+
+/* Chimney smoke wisp */
+.smoke-wisp {
+  animation: smoke-drift 3s ease-in-out infinite;
+}
+
+@keyframes smoke-drift {
+  0%, 100% { opacity: 0.35; }
+  50% { opacity: 0.65; }
 }
 
 @keyframes sun-glow {
